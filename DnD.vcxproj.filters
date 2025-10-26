@@ -21,15 +21,21 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="die.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="die100.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="die.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="d20.h">
+    <ClInclude Include="test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="test.h">
+    <ClInclude Include="die100.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
