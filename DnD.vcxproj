@@ -127,14 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="character.cpp" />
     <ClCompile Include="die.cpp" />
     <ClCompile Include="die100.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="attribute.h" />
+    <ClInclude Include="character.h" />
+    <ClInclude Include="class.h" />
     <ClInclude Include="die.h" />
     <ClInclude Include="die100.h" />
+    <ClInclude Include="race.h" />
     <ClInclude Include="test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

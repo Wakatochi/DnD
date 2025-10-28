@@ -1,4 +1,5 @@
 #include "test.h"
+#include "character.h"
 #include "die.h"
 #include "die100.h"
 
@@ -71,6 +72,22 @@ void tossD8()
 
 void tossD10()
 {
+   Die d10(10);
+
+   std::cout << "---- Toss D10 100 times ---" << std::endl;
+   for(int i = 0; i < 100; i++)
+   {
+      int value = d10.toss();
+      assert(value > 0 && value <= 10);
+
+      std::cout << i + 1 << ": " << value << std::endl;
+   }
+
+   std::cout << "--- ------------------ ---" << std::endl;
+}
+
+void tossD100()
+{
    D100 d100;
 
    std::cout << "---- Toss D100 100 times (Percentile)---" << std::endl;
@@ -94,6 +111,15 @@ void tossD10()
    std::cout << "--- ------------------ ---" << std::endl;
 }
 
-void tossD100()
+void characterAttack()
 {
+   Character chara;
+
+   std::cout << "---- Attack 100 times on AC 8 ---" << std::endl;
+   for(int i = 0; i < 100; i++)
+   {
+      std::cout << i + 1 << ": ";
+      chara.attack(8);
+   }
+   std::cout << "--- ------------------ ---" << std::endl;
 }

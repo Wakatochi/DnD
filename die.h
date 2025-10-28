@@ -16,8 +16,7 @@ class Die
       std::random_device m_randomDevice;
       std::uniform_int_distribution<> m_rand;
 
-      std::uniform_int_distribution<> distribution(int sides);
-      
+      std::uniform_int_distribution<> distribution(int sides); 
 };
 
 #endif // DIE_H

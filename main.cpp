@@ -8,5 +8,8 @@ int main()
    tossD8();
    tossD10();
    tossD100();
+
+   characterAttack();
+
    return 0;
 }
