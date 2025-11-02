@@ -19,18 +19,18 @@
     <Filter Include="Source Files\character">
       <UniqueIdentifier>{5802d693-ba7e-49a6-a902-bc4435d84adc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\dice">
+      <UniqueIdentifier>{d76a4504-bbd9-4a8e-9495-2b6ea84e0bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dice">
+      <UniqueIdentifier>{c1e1f0eb-499c-4426-a6a0-d188107e84aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\attribute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\class.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\die.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\die100.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\race.h">
@@ -45,14 +45,14 @@
     <ClInclude Include="include\character\player.h">
       <Filter>Header Files\character</Filter>
     </ClInclude>
+    <ClInclude Include="include\dice\die.h">
+      <Filter>Header Files\dice</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dice\die100.h">
+      <Filter>Header Files\dice</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\die.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\die100.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -64,6 +64,12 @@
     </ClCompile>
     <ClCompile Include="src\character\player.cpp">
       <Filter>Source Files\character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dice\die.cpp">
+      <Filter>Source Files\dice</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dice\die100.cpp">
+      <Filter>Source Files\dice</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

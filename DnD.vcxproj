@@ -23,16 +23,16 @@
     <ClInclude Include="include\character\character.h" />
     <ClInclude Include="include\character\player.h" />
     <ClInclude Include="include\class.h" />
-    <ClInclude Include="include\die.h" />
-    <ClInclude Include="include\die100.h" />
+    <ClInclude Include="include\dice\die.h" />
+    <ClInclude Include="include\dice\die100.h" />
     <ClInclude Include="include\race.h" />
     <ClInclude Include="include\test.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\character\character.cpp" />
     <ClCompile Include="src\character\player.cpp" />
-    <ClCompile Include="src\die.cpp" />
-    <ClCompile Include="src\die100.cpp" />
+    <ClCompile Include="src\dice\die.cpp" />
+    <ClCompile Include="src\dice\die100.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\test.cpp" />
   </ItemGroup>
@@ -89,8 +89,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\Programing\Visual Studio 2019\Projects\DnD\include;E:\Programing\Visual Studio 2019\Projects\DnD\include\character;$(IncludePath)</IncludePath>
-    <SourcePath>E:\Programing\Visual Studio 2019\Projects\DnD\src;E:\Programing\Visual Studio 2019\Projects\DnD\src\character;$(SourcePath)</SourcePath>
+    <IncludePath>E:\Programing\Visual Studio 2019\Projects\DnD\include;E:\Programing\Visual Studio 2019\Projects\DnD\include\character;E:\Programing\Visual Studio 2019\Projects\DnD\include\dice;$(IncludePath)</IncludePath>
+    <SourcePath>E:\Programing\Visual Studio 2019\Projects\DnD\src;E:\Programing\Visual Studio 2019\Projects\DnD\src\character;E:\Programing\Visual Studio 2019\Projects\DnD\src\dice;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
