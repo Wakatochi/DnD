@@ -25,17 +25,11 @@
     <Filter Include="Header Files\dice">
       <UniqueIdentifier>{c1e1f0eb-499c-4426-a6a0-d188107e84aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\tables">
+      <UniqueIdentifier>{376b9774-340a-4248-b23a-2f25d3c61cc8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\attribute.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\class.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\race.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -50,6 +44,15 @@
     </ClInclude>
     <ClInclude Include="include\dice\die100.h">
       <Filter>Header Files\dice</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tables\attribute.h">
+      <Filter>Header Files\tables</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tables\class.h">
+      <Filter>Header Files\tables</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tables\race.h">
+      <Filter>Header Files\tables</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

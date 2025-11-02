@@ -13,4 +13,12 @@ enum class Class
    MAGE,    // Wizard
 };
 
+enum class Group
+{
+   WARRIOR = Class::FIGHTER, // Fighter, Paladin, Ranger
+   ROGUE   = Class::THIEF,   // Thief, Bard
+   PRIEST  = Class::CLERIC,  // Cleric, Druid
+   WIZARD  = Class::MAGE,    // Mage
+};
+
 #endif CLASS_H
