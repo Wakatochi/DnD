@@ -3,14 +3,21 @@
 
 #include "attribute.h"
 #include "class.h"
+#include <string>
 
 class Character
 {
    public:
       Character();
-      int attack(int ac) const;
+      Character(std::string in_name, Class in_class);
+      int attack(Character* in_target) const;
+
+      int getAc() const;
 
    private:
+
+   protected:
+      std::string m_name;
       Class m_class;
       int m_level;
       int m_thac0; // to-hit-armor-class-0

@@ -18,6 +18,24 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\attribute.h" />
+    <ClInclude Include="include\character\character.h" />
+    <ClInclude Include="include\character\player.h" />
+    <ClInclude Include="include\class.h" />
+    <ClInclude Include="include\die.h" />
+    <ClInclude Include="include\die100.h" />
+    <ClInclude Include="include\race.h" />
+    <ClInclude Include="include\test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\character\character.cpp" />
+    <ClCompile Include="src\character\player.cpp" />
+    <ClCompile Include="src\die.cpp" />
+    <ClCompile Include="src\die100.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\test.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -70,6 +88,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\Programing\Visual Studio 2019\Projects\DnD\include;E:\Programing\Visual Studio 2019\Projects\DnD\include\character;$(IncludePath)</IncludePath>
+    <SourcePath>E:\Programing\Visual Studio 2019\Projects\DnD\src;E:\Programing\Visual Studio 2019\Projects\DnD\src\character;$(SourcePath)</SourcePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -126,22 +148,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="character.cpp" />
-    <ClCompile Include="die.cpp" />
-    <ClCompile Include="die100.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="attribute.h" />
-    <ClInclude Include="character.h" />
-    <ClInclude Include="class.h" />
-    <ClInclude Include="die.h" />
-    <ClInclude Include="die100.h" />
-    <ClInclude Include="race.h" />
-    <ClInclude Include="test.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
