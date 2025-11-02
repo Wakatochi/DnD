@@ -15,10 +15,10 @@ enum class Class
 
 enum class Group
 {
-   WARRIOR = Class::FIGHTER, // Fighter, Paladin, Ranger
-   ROGUE   = Class::THIEF,   // Thief, Bard
-   PRIEST  = Class::CLERIC,  // Cleric, Druid
-   WIZARD  = Class::MAGE,    // Mage
+   WARRIOR, // Fighter, Paladin, Ranger
+   ROGUE,   // Thief, Bard
+   PRIEST,  // Cleric, Druid
+   WIZARD,  // Mage
 };
 
 #endif CLASS_H
