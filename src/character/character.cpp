@@ -11,14 +11,9 @@ Character::Character()
 , m_thac0(20)
 , m_ac(10)
 , m_hp(12)
-, m_attr()
+, m_attr({18, 10, 16, 10, 10, 13})
 {
-   m_attr.strength     = 18;
-   m_attr.dexterity    = 10;
-   m_attr.constitution = 16;
-   m_attr.intelligence = 10;
-   m_attr.wisdom       = 10;
-   m_attr.charisma     = 13;
+
 }
 
 Character::Character(std::string in_name, Class in_class)
@@ -28,14 +23,9 @@ Character::Character(std::string in_name, Class in_class)
 , m_thac0(20)
 , m_ac(10)
 , m_hp(12)
-, m_attr()
+, m_attr({18, 10, 16, 10, 10, 13})
 {
-   m_attr.strength = 18;
-   m_attr.dexterity = 10;
-   m_attr.constitution = 16;
-   m_attr.intelligence = 10;
-   m_attr.wisdom = 10;
-   m_attr.charisma = 13;
+    
 }
 
 int Character::attack(Character* in_target) const
@@ -72,4 +62,29 @@ int Character::attack(Character* in_target) const
 int Character::getAc() const
 {
    return m_ac;
+}
+
+void Character::setLevel(int in_level)
+{
+   m_level = in_level;
+}
+
+void Character::setThac0(int in_thac0)
+{
+   m_thac0 = in_thac0;
+}
+
+void Character::setAc(int in_ac)
+{
+   m_ac = in_ac;
+}
+
+void Character::setHp(int in_hp)
+{
+   m_hp = in_hp;
+}
+
+void Character::setAttributes(Attribute in_attr)
+{
+   m_attr = in_attr;
 }

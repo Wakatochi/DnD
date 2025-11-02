@@ -14,6 +14,14 @@ class Character
 
       int getAc() const;
 
+      void setLevel(int in_level);
+
+      // Override generated values
+      void setThac0(int in_thac0);
+      void setAc(int in_ac);
+      void setHp(int in_hp);
+      void setAttributes(Attribute in_attr);
+
    private:
 
    protected:

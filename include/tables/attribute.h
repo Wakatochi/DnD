@@ -9,6 +9,21 @@ struct Attribute
    int intelligence;
    int wisdom;
    int charisma;
+/*
+   Attribute operator=(Attribute right)
+   {
+      Attribute ret;
+
+      ret.strength     = right.strength;
+      ret.dexterity    = right.dexterity;
+      ret.constitution = right.constitution;
+      ret.intelligence = right.intelligence;
+      ret.wisdom       = right.wisdom;
+      ret.charisma     = right.charisma;
+
+      return ret;
+   }
+*/
 };
 
 struct Exceptional
