@@ -28,11 +28,12 @@ Character::Character(std::string in_name, Class in_class)
     
 }
 
-int Character::attack(Character* in_target) const
+void Character::attack(Character* in_target) const
 {
    Die d20(20);
    StrengthLookup lookup;
-   
+   Hit hitOut = Hit::MISS;
+
    int dice = d20.toss();
    int modifier = lookup.strenghtMatrix[m_attr.strength - 1][(int)StrengthLookup::Strength::HIT];
    int hit = dice + modifier;
@@ -42,26 +43,55 @@ int Character::attack(Character* in_target) const
    if(dice == 20)
    {
       std::cout << " CRIT HIT!" << std::endl;
+      hitOut = Hit::CRIT;
    }
    else if(dice == 1)
    {
       std::cout << " CRIT MISS!" << std::endl;
+      hitOut = Hit::MISS;
    }
    else if(hit < m_thac0 - ac)
    {
       std::cout << " MISS (" << hit << " < THAC0:" << m_thac0 << "-AC:" << ac << ")" << std::endl;
+      hitOut = Hit::MISS;
    }
    else
    {
       std::cout << " HIT (" << hit << " >= THAC0:" << m_thac0 << "-AC:" << ac << ")" << std::endl;
+      hitOut = Hit::HIT;
    }
-   
-   return hit;
+
+   int dmg = calculateDamage(hitOut, in_target);
+   bool dead = in_target->setDamage(dmg);
+}
+
+int Character::calculateDamage(Hit in_hit, Character* in_target) const
+{
+   return 0;
 }
 
 int Character::getAc() const
 {
    return m_ac;
+}
+
+int Character::getHp() const
+{
+   return m_hp;
+}
+
+bool Character::setDamage(int dmg)
+{
+   bool dead = false;
+
+   m_hp = m_hp - dmg;
+
+   if(m_hp <= 0)
+   {
+      dead = true;
+   }
+
+   return dead;
 }
 
 void Character::setLevel(int in_level)
