@@ -67,7 +67,28 @@ void Character::attack(Character* in_target) const
 
 int Character::calculateDamage(Hit in_hit, Character* in_target) const
 {
-   return 0;
+   Die d4(4);
+   StrengthLookup lookup;
+   int damage = 0;
+
+   if(in_hit != Hit::MISS)
+   {
+      int dice = d4.toss();
+      int modifier = lookup.strenghtMatrix[m_attr.strength - 1][(int)StrengthLookup::Strength::DMG];
+
+      damage = dice + modifier;
+      std::cout << dice << "+" << modifier << "=" << damage;
+
+      if(in_hit == Hit::CRIT)
+      {
+         damage = damage * 2;
+         std::cout << " * 2 = " << damage << std::endl;
+      }
+
+      std::cout << m_name << " does " << damage << " damage to " << in_target->getName() << std::endl;
+   }
+
+   return damage;
 }
 
 int Character::getAc() const
@@ -80,6 +101,11 @@ int Character::getHp() const
    return m_hp;
 }
 
+std::string Character::getName() const
+{
+   return m_name;
+}
+
 bool Character::setDamage(int dmg)
 {
    bool dead = false;
@@ -89,6 +115,7 @@ bool Character::setDamage(int dmg)
    if(m_hp <= 0)
    {
       dead = true;
+      std::cout << m_name << " is dead" << std::endl;
    }
 
    return dead;

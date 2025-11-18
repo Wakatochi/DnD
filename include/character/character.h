@@ -18,6 +18,7 @@ class Character
 
       int getAc() const;
       int getHp() const;
+      std::string getName() const;
 
       bool setDamage(int dmg);
 
