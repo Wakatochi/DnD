@@ -11,3 +11,8 @@ Player::Player(std::string in_name, Class in_class)
 {
 
 }
+
+void Player::levelUp()
+{
+
+}

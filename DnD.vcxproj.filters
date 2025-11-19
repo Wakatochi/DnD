@@ -54,6 +54,9 @@
     <ClInclude Include="include\tables\race.h">
       <Filter>Header Files\tables</Filter>
     </ClInclude>
+    <ClInclude Include="include\character\hit.h">
+      <Filter>Header Files\character</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">

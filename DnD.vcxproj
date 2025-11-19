@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\character\character.h" />
+    <ClInclude Include="include\character\hit.h" />
     <ClInclude Include="include\character\player.h" />
     <ClInclude Include="include\dice\die.h" />
     <ClInclude Include="include\dice\die100.h" />

@@ -3,6 +3,8 @@
 
 #include "attribute.h"
 #include "class.h"
+#include "hit.h"
+
 #include <string>
 
 class Character
@@ -10,9 +12,22 @@ class Character
    public:
       Character();
       Character(std::string in_name, Class in_class);
-      int attack(Character* in_target) const;
+
+      void attack(Character* in_target) const;
+      int calculateDamage(Hit in_hit, Character* in_target) const;
 
       int getAc() const;
+      int getHp() const;
+      std::string getName() const;
+
+      bool setDamage(int dmg);
+
+      // Override generated values
+      void setLevel(int in_level);
+      void setThac0(int in_thac0);
+      void setAc(int in_ac);
+      void setHp(int in_hp);
+      void setAttributes(Attribute in_attr);
 
    private:
 

@@ -1,6 +1,8 @@
 #ifndef TEST_H
 #define TEST_H
 
+#include "character.h"
+
 void tossD20();
 void tossD4();
 void tossD6();

@@ -1,5 +1,5 @@
 #include "test.h"
-#include "character.h"
+
 #include "die.h"
 #include "die100.h"
 #include "player.h"
@@ -115,13 +115,16 @@ void tossD100()
 void characterAttack()
 {
    Player player("Pat", Class::FIGHTER);
-   Character opponent;
+
+   Character carbos("Carbos", Class::FIGHTER);
+   carbos.setAttributes({12, 10, 9, 12, 12, 10});
+   carbos.setHp(4);
 
    std::cout << "---- Attack 100 times on AC 8 ---" << std::endl;
    for(int i = 0; i < 100; i++)
    {
       std::cout << i + 1 << ": ";
-      player.attack(&opponent);
+      player.attack(&carbos);
    }
    std::cout << "--- ------------------ ---" << std::endl;
 }
